@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import './App.css'
-import Collapse from './collapse'
 import { useInView } from 'react-intersection-observer';
 function App() {
   const [refTitle, inViewTitle] = useInView({
@@ -19,66 +18,23 @@ function App() {
     triggerOnce: true, // 仅触发一次动画
     threshold: 0.1, // 元素进入可见区域的阈值
   });
-  const [refQA, inViewQA] = useInView({
-    triggerOnce: true, // 仅触发一次动画
-    threshold: 0.1, // 元素进入可见区域的阈值
-  });
 
   return (
     <>
       <div
-        className="bg-[#010310] text-white p-[25px] lg:px-[100px] w-screen overflow-hidden relative transform-gpu tracking-[0.02em]">
-        <nav className="flex flex-row items-center justify-between mt-[10px] lg:mt-[39px]" id="start">
-          <img
-            src="/assets/logo.c0c67abd.png" className="h-[25px] lg:h-[30px] w-auto z-50" />
-          <div
-            className="flex flex-col items-center justify-center gap-[3px] w-[42px] h-[28px] border-[2px] border-white rounded-[15px] lg:hidden z-50 active:bg-white lg:hover:bg-white transition-all duration-300 group false">
-            <div
-              className="w-[20px] h-[3px] bg-white rounded-full lg:group-hover:bg-black transition-all duration-300 false">
-            </div>
-            <div
-              className="w-[20px] h-[3px] bg-white rounded-full lg:group-hover:bg-black transition-all duration-300 false">
-            </div>
-            <div
-              className="w-[20px] h-[3px] bg-white rounded-full lg:group-hover:bg-black transition-all duration-300 false">
-            </div>
-          </div>
-          <a
-            className="font-bold text-[14.7px] ml-auto lg:text-[18px] cursor-pointer hidden lg:block"
-            href="https://docs.TODO:.xyz/" target="_blank">Docs</a>
-          <a
-            href="https://twitter.com/TODO:xyz" target="_blank"
-            className="ml-[25px] cursor-pointer hidden lg:block">
-            <svg xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24" className="w-[30px] h-auto fill-white lg:w-[23px] lg:h-[23px]">
-              <path
-                d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z">
-              </path>
-            </svg></a><button
-              className="hidden font-bold text-[15px] text-black bg-white text-center tracking-[0.02em] h-[30px] w-[117px] rounded-[8px] border-[1.5px] border-white lg:text-[18px] lg:w-[165px] lg:h-[42px] lg:border-[1px] hover:bg-black hover:text-white transition-all duration-300 lg:ml-[20px] z-50">Launch
-            App</button>
-          <div
-            className="fixed top-0 left-0 w-screen h-screen bg-black z-40 flex flex-col gap-[40px] px-[59px] text-[36px] text-white font-medium pt-[100px] transition-all duration-300 -z-50 -translate-y-20 opacity-0">
-            <a href="#faq">FAQ</a>
-            <a href="https://docs.TODO:.xyz/" target="_blank">Docs</a>
-            <a
-              href="https://twitter.com/TODO:xyz" target="_blank">Twitter</a>
-            <a
-              href="https://medium.com/@TODO:xyz" target="_blank">Blog</a>
-          </div>
-        </nav>
-
-
+        className="bg-[#fbfbfd] text-black p-[20px] lg:p-[2px] lg:px-[100px] w-screen overflow-hidden relative transform-gpu tracking-[0.02em]">
         <h1
-          className="font-medium text-[32px] leading-[40px] max-w-[220px] relative mt-[58px] lg:mt-[83px] lg:text-[42px] lg:leading-[55px] lg:w-[600px] capitalize sm:max-w-fit">
+          className="font-bold text-[32px] leading-[40px] max-w-[220px] relative mt-[58px] lg:mt-[175px] lg:text-[64px] lg:leading-[55px] lg:w-[600px] capitalize sm:max-w-fit">
           <div
             className="relative z-10 flex flex-row items-center justify-start gap-[5px] lg:gap-[10px] flex-wrap leading-[31.68px] lg:leading-[55px] max-w-fit">
-            <div className="head-motion-span">
-                
+            <div className="head-motion-span flex-wrap lg:flex-nowrap lg:leading-[55px] leading-[40px]">
+              <img src="./src/assets/p1circle.svg" className='w-[60px] left-[36px] top-[-14px] lg:min-w-[111px] lg:h-auto absolute lg:left-[56px] lg:top-[-24px] lg:object-cover' style={{ zIndex: 0 }}></img>
+
               <motion.div
                 initial={{ y: 20 }}
                 animate={{ y: inViewHead ? 0 : 40 }}
                 transition={{ duration: 0.1 }}
+                style={{ zIndex: 1 }} 
               >
                 Enhance
               </motion.div>
@@ -98,44 +54,51 @@ function App() {
               </motion.div>
             </div>
 
-            <div className="absolute w-full h-[13px] -bottom-[3px] -left-[2px] blur-[10px] lg:w-[285px] lg:h-[22px] lg:left-[63%] lg:bottom-[2px] specialAnimationUnderline -z-10"
-              style={{ opacity: 1, transform: "none" }}></div>
-            <div className="absolute w-full h-[13px] -bottom-[3px] -left-[2px] lg:w-[285px] lg:h-[22px] lg:left-[63%] lg:bottom-[2px] specialAnimationUnderline -z-10 "
-              style={{ opacity: 1, transform: "none" }}></div>
+
           </div>
         </h1>
-        <p className="text-[#999AA1] w-10/12 font-normal text-[16px] leading-[20px]  mt-[24px] lg:text-[24px] lg:w-[509px] lg:leading-[27.5px] z-20 relative"
+        <p className="text-[#686972] w-8/12 font-normal text-[16px] leading-[20px]  mt-[40px] lg:text-[24px] lg:w-[850px] lg:leading-[36px] z-20 relative"
           style={{ opacity: 1 }}>Crebit is an SVB model on-chain lending protocol which enable liquidity flow between LPs and projects.</p>
+        <img src="./src/assets/p1bg.svg"
+          className=" lg:min-w-[447px] lg:h-auto lg:object-cover absolute right-[0px] top-[0px] bg-repeat-x" style={{ opacity: 1, transform: "none" }} />
+        <img src="./src/assets/p1gradients.svg"
+          className=" w-full lg:min-w-[447px] lg:h-auto lg:object-cover absolute right-[0px] top-[0px]" style={{ opacity: 0.2, transform: "none" }}></img>
+
+        {/* 2 */}
         <motion.div
           initial={{ y: -40 }}
           animate={{ y: inViewHead ? 0 : -40 }}
           transition={{ duration: 0.5 }}
           ref={refHead}
         >
-        <div className="flex flex-row mt-[25px] gap-[25px] lg:mt-[30px]">
-          <a href="https://arbitrum.TODO:.xyz/lending"
-            target="_blank">
-            <button
-              className="font-bold text-white text-[15px] leading-[13px] text-center h-[36px] w-[140px] bg-gradient-to-r from-[#0021F5] rounded-md relative lg:w-[148px] lg:h-[48px] lg:text-[16px] z-30 group"
-              style={{ opacity: 1, transform: "none" }}>
-              Lend
-              <div
-                className="bg-gradient-to-l from-[#0021F5] rounded-md absolute top-0 left-0 h-full w-full -z-10 opacity-[.2] group-hover:opacity-100 transition-all duration-500">
-              </div>
-            </button>
-          </a>
-          <a href="https://arbitrum.TODO:.xyz/lending" target="_blank"
-            className="special-button relative rounded-lg overflow-hidden z-10 w-[147px] p-[3px] grid place-items-center lg:w-[154px] cursor-pointer select-none"
-            style={{ opacity: 1, transform: "none" }}>
-            <div
-              className="bg-[#02061c] lg:bg-[#010310] relative z-10 h-[36px] w-[140px] grid place-items-center font-bold text-white text-[15px] text-center rounded-lg lg:w-[148px] lg:h-[48px] lg:text-[16px] ">
-              Borrow</div>
-          </a>
-        </div>
+          <div className="flex flex-row mt-[25px] gap-[25px] lg:mt-[50px]">
+            <a href="https://arbitrum.TODO:.xyz/lending"
+              target="_blank">
+
+              <button
+                className="font-bold text-black text-[15px] leading-[13px] text-center h-[36px] w-[130px] bg-gradient-to-r  rounded-md relative lg:w-[184px] lg:h-[48px] lg:text-[16px] z-30 group"
+                style={{ opacity: 1, transform: "none", background: "linear-gradient(to right, #c0feef, #19fffb)", border: "1px solid #39a29a", borderTop: "1px solid #57b68d", borderBottom: "1px solid #1589aa" }}>
+                Lend
+                <div className='absolute top-0 left-0 buttoncolor'></div>
+              </button>
+
+            </a>
+            <a href="https://arbitrum.TODO:.xyz/lending" target="_blank"
+              style={{ opacity: 1, transform: "none" }}
+              className='ml-[8px]'
+            >
+              <button
+                className="font-bold text-black text-[15px] leading-[13px] text-center h-[36px] w-[130px] bg-gradient-to-r  rounded-md relative lg:w-[184px] lg:h-[48px] lg:text-[16px] z-30 group"
+                style={{ opacity: 1, transform: "none", background: "#fff", border: "1px solid #39a29a", borderTop: "1px solid #57b68d", borderBottom: "1px solid #1589aa" }}>
+                Borrow
+                <div className='absolute top-0 left-0 buttoncolor'></div>
+              </button>
+            </a>
+          </div>
         </motion.div>
         <div className="relative">
           <div
-            className="w-[120vw] h-full max-h-[400px] absolute top-0 left-0 bg-gradient-to-b from-transparent via-[#002dff]/40 blur-3xl  -translate-y-[30%] -translate-x-[10vw] transform-gpu transition-all duration-300 lg:hidden">
+            className="w-[120vw] h-full max-h-[400px] absolute top-0 left-0 bg-gradient-to-b from-transparent  -translate-y-[30%] -translate-x-[10vw] transform-gpu transition-all duration-300 lg:hidden">
           </div>
           <div className="lg:flex flex-row items-center justify-between mt-[380px] lg:mt-[500px] z-50 relative overflow-visible"
             style={{ opacity: 1 }}>
@@ -146,49 +109,49 @@ function App() {
                 transition={{ duration: 0.5 }}
                 ref={refTitle}
               >
-                <h1 className="font-bold text-[34px] leading-[32px]  relative lg:text-[42px] capitalize"
+                <h1 className="font-bold text-[34px] leading-[32px]  relative lg:text-[42px] capitalize lg:mt-[146px] lg:text-[63px]"
                 ><span className="relative z-10 w-fit ">
-                    Benefit to Projects<span
-                      className="absolute w-[calc(100%+5px)] h-[13px] bottom-0 -left-[2px] lg:h-[22px] specialAnimationUnderline -z-10"></span><span
-                        className="absolute w-[calc(100%+5px)] h-[13px] bottom-0 -left-[2px] lg:h-[22px] specialAnimationUnderline -z-10 blur-[10px]"></span>
+                    Benefit to Projects
                   </span></h1>
               </motion.div>
               <motion.div
                 initial={{ x: -150 }}
-                transition={{ duration:1 }}
+                transition={{ duration: 1 }}
                 animate={{ x: inViewTitle ? 0 : -150 }}
               >
-                <p className="text-[#999AA1]  font-normal text-[16px] leading-[20px]  mt-[24px] lg:text-[24px] lg:w-5/6 lg:leading-[36px] lg:mt-[37px]"
+                <p className="text-[#686972]  font-normal text-[16px] leading-[20px]  mt-[24px] lg:text-[24px] lg:w-4/6 lg:leading-[36px] lg:mt-[44px]"
                   style={{ opacity: 1, transform: "none" }}>Early stage projects are lack of liquidity and willing to pay alpha token + interest
                   DeFi rates</p>
               </motion.div>
               <motion.div
                 initial={{ x: 50 }}
                 animate={{ x: inViewTitle ? 0 : 100 }}
-                transition={{ duration:1 }}
+                transition={{ duration: 1 }}
               >
-                <div className="flex"><a href="https://docs.TODO:" target="_blank"
-                  className="font-semibold text-white text-[12px] leading-[12px] text-center  h-[36px] w-[135px] rounded-md border-[2px] border-white mt-[25px] lg:text-[16px] lg:w-[185px] lg:h-[48px] lg:mt-[37px] lg:border-[1px] lg:rounded-[8px] relative group overflow-hidden"
-                  style={{ opacity: 1, transform: "none" }}>
-                  <div
-                    className="absolute top-0 left-0 w-full h-full group-hover:bg-white transition-all duration-300 hover:text-black grid place-items-center">
-                    Learn more</div>
-                </a></div>
-              </motion.div>
 
+                <a href="https://arbitrum.TODO:.xyz/lending" target="_blank"
+                  style={{ opacity: 1, transform: "none" }}
+                  className='ml-[8px]'
+                >
+                  <button
+                    className="font-bold text-black text-[15px] leading-[13px] text-center h-[36px] w-[140px] bg-gradient-to-r  rounded-md relative lg:w-[184px] lg:h-[48px] lg:text-[16px] z-30 group mt-[48px]"
+                    style={{ opacity: 1, transform: "none", background: "#fff", border: "1px solid #39a29a", borderTop: "1px solid #57b68d", borderBottom: "1px solid #1589aa" }}>
+                    Learn more
+                    <div className='absolute top-0 left-0 buttoncolor'></div>
+                  </button>
+                </a>
+              </motion.div>
             </div>
-            <div style={{ transform: " translateY(14.3834px) translateZ(0px)" }}><img src="/assets/blob1.4a904ed6.png"
-              className="lg:min-w-[447px] lg:h-auto lg:object-cover" style={{ opacity: 1, transform: "none" }} /></div>
+
+            <div style={{ transform: " translateY(86px) translateZ(0px)" }}>
+              <img src="./src/assets/p2bg.svg"
+                className="w-[384px] lg:w-[384px] lg:h-auto lg:object-cover" style={{ opacity: 1, transform: "none" }} />
+            </div>
           </div>
+          {/* 3 */}
           <div className="lg:flex flex-row-reverse items-center justify-between mt-[175px] z-10 relative overflow-visible"
             style={{ opacity: 1 }}>
-            <div className="w-screen h-[300px] absolute top-[25%] left-0 bg-[#002dff]/30 blur-3xl z-0 lg:hidden"></div>
-            <div className="absolute -top-[950px] transition-all duration-300 z-0 w-[120vw] h-[650px] -left-[10vw] blur-3xl opacity-20 hidden lg:block transform-gpu"
-              style={{ background: "radial-gradient(rgb(0, 45, 255), rgb(0, 0, 0))" }}></div>
-            <div className="absolute top-[300px] transition-all duration-300 z-0 w-[40vw] h-[650px] -right-[20vw] rotate-90 blur-3xl opacity-20 hidden lg:block transform-gpu"
-              style={{ background: "radial-gradient(rgb(0, 45, 255), rgb(0, 0, 0))" }}></div>
-            <div className="absolute -top-[500px] transition-all duration-300 z-0 w-[120vw] h-[650px] -left-[10vw] blur-3xl opacity-20 hidden lg:block transform-gpu"
-              style={{ background: "radial-gradient(rgb(0, 45, 255), rgb(0, 0, 0))" }}></div>
+
             <div className="lg:flex-1 relative z-10">
               <motion.div
                 initial={{ x: 150 }}
@@ -196,22 +159,19 @@ function App() {
                 transition={{ duration: 0.5 }}
                 ref={refTitle2}
               >
-                <h1 className="font-bold text-[34px] leading-[32px]  relative  text-right lg:text-[42px] capitalize"
+                <h1 className="font-bold text-[34px] leading-[32px]  relative  text-right lg:text-[42px] capitalize lg:mt-[166px] lg:text-[63px] lg:w-[950px] p3h1"
                   style={{ opacity: 1, transform: "none" }}><span className="relative z-10 w-fit">
                     Benefit to Liquidity Providers
-                    <span
-                      className="absolute w-[calc(100%+5px)] h-[13px] bottom-0 -left-[2px] lg:h-[22px] specialAnimationUnderline -z-10"></span><span
-                        className="absolute w-[calc(100%+5px)] h-[13px] bottom-0 -left-[2px] lg:h-[22px] specialAnimationUnderline -z-10 blur-[10px]"></span>
                   </span></h1>
               </motion.div>
               <motion.div
                 initial={{ x: 150 }}
                 animate={{ x: inViewTitle2 ? 0 : 150 }}
-                transition={{ duration:1 }}
+                transition={{ duration: 1 }}
               >
 
 
-                <p className="text-[#999AA1]  font-normal text-[16px] leading-[20px] mt-[24px] text-right lg:text-[24px] lg:w-5/6 lg:max-w-[500px] lg:leading-[36px] lg:ml-auto lg:mt-[37px] relative z-10"
+                <p className="text-[#686972]  font-normal text-[16px] leading-[20px] mt-[24px] text-right lg:text-[24px] lg:w-5/6 lg:max-w-[500px] lg:leading-[36px] lg:ml-auto lg:mt-[55px] relative z-10"
                   style={{ opacity: 1, transform: "none" }}>Get interest while earn alpha token</p>
               </motion.div>
               <motion.div
@@ -219,23 +179,32 @@ function App() {
                 animate={{ x: inViewTitle2 ? 0 : 150 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="flex flex-row justify-end"><a
-                  href="https://docs.TODO:" target="_blank"
-                  className="font-semibold text-white text-[12px] leading-[12px] text-center  h-[36px] w-[135px] rounded-md border-[2px] border-white mt-[25px] lg:text-[16px] lg:w-[185px] lg:h-[48px] lg:mt-[37px] lg:border-[1px] lg:rounded-[8px] relative group overflow-hidden"
-                  style={{ opacity: 1, transform: "none" }}>
-                  <div
-                    className="absolute top-0 left-0 w-full h-full group-hover:bg-white transition-all duration-300 hover:text-black grid place-items-center">
-                    Learn more</div>
-                </a></div>
+                <div className="flex flex-row justify-end">
+                  <a href="https://arbitrum.TODO:.xyz/lending" target="_blank"
+                    style={{ opacity: 1, transform: "none" }}
+                  >
+                    <button
+                      className="font-bold text-black text-[15px] leading-[13px] text-center h-[36px] w-[140px] bg-gradient-to-r  rounded-md relative lg:w-[184px] lg:h-[48px] lg:text-[16px] z-30 group mt-[56px]"
+                      style={{ opacity: 1, transform: "none", background: "#fff", border: "1px solid #39a29a", borderTop: "1px solid #57b68d", borderBottom: "1px solid #1589aa" }}>
+                      Learn more
+                      <div className='absolute top-0 left-0 buttoncolor'></div>
+                    </button>
+                  </a>
+                </div>
               </motion.div>
             </div>
-            <div className="lg:flex-1" style={{ transform: "translateY(14.3834px) translateZ(0px)" }}><img
-              src="/assets/token1.50af6c92.png" className="lg:w-full lg:max-w-[450px] lg:h-auto lg:object-cover"
-              style={{ opacity: 1, transform: "none" }} /></div>
+            <div className="lg:flex-1 p3" 
+            style={{  transformOrigin: 'left', position: 'relative', left: "-100px" }}
+            >
+              <img src="./src/assets/p3bg.svg"
+                className="lg:h-auto lg:object-cover" />
+            </div>
+
           </div>
-          <div className="lg:flex flex-row items-center justify-between mt-[280px] lg:gap-[50px] relative w-full"
+          {/* 4 */}
+          <div className="lg:flex flex-row items-center justify-between mt-[-22px] lg:gap-[50px] relative w-full"
             style={{ opacity: 1 }}>
-            <div className="w-screen h-[350px] absolute top-[50%] left-0 bg-[#002dff]/30 blur-3xl z-0 lg:hidden"></div>
+            
             <div className="relative z-10 lg:flex-1">
               <motion.div
                 initial={{ x: -150 }}
@@ -243,19 +212,18 @@ function App() {
                 transition={{ duration: 0.5 }}
                 ref={refTitle3}
               >
-                <h1 className="font-bold text-[34px] leading-[32px]  relative lg:text-[42px] capitalize"
-                  style={{ opacity: 1, transform: "none" }}><span className="relative z-10 w-fit">
-                    Benefit to Public Chain<span
-                      className="absolute w-[calc(100%+5px)] h-[13px] bottom-0 -left-[2px] lg:h-[22px] specialAnimationUnderline -z-10"></span><span
-                        className="absolute w-[calc(100%+5px)] h-[13px] bottom-0 -left-[2px] lg:h-[22px] specialAnimationUnderline -z-10 blur-[10px]"></span>
-                  </span></h1>
+                <h1 className="p4h1 font-bold text-[34px] leading-[32px]  relative lg:text-[42px] capitalize lg:mt-[146px] lg:text-[63px]"
+                 >
+                    
+                    Benefit to Public Chain
+                  </h1>
               </motion.div>
               <motion.div
                 initial={{ x: -150 }}
                 animate={{ x: inViewTitle3 ? 0 : -150 }}
-                transition={{ duration:1 }}
+                transition={{ duration: 1 }}
               >
-                <p className="text-[#999AA1]  font-normal text-[16px] leading-[20px]  mt-[24px] lg:text-[24px] lg:min-w-[350px] lg:max-w-[576px] lg:leading-[36px] lg:mt-[37px]"
+                <p className="text-[#686972]  font-normal text-[16px] leading-[20px]  mt-[24px] lg:text-[24px] lg:min-w-[350px] lg:max-w-[576px] lg:leading-[36px] lg:mt-[66px]"
                   style={{ opacity: 1, transform: "none" }}>A new tool to help the ecosystem growth</p>
               </motion.div>
               <motion.div
@@ -263,69 +231,101 @@ function App() {
                 animate={{ x: inViewTitle3 ? 0 : -150 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="flex"><a href="https://docs.TODO:" target="_blank"
-                  className="font-semibold text-white text-[12px] leading-[12px] text-center  h-[36px] w-[135px] rounded-md border-[2px] border-white mt-[25px] lg:text-[16px] lg:w-[185px] lg:h-[48px] lg:mt-[37px] lg:border-[1px] lg:rounded-[8px] relative group overflow-hidden"
-                  style={{ opacity: 1, transform: "none" }}>
-                  <div
-                    className="absolute top-0 left-0 w-full h-full group-hover:bg-white transition-all duration-300 hover:text-black grid place-items-center">
-                    Learn more</div>
-                </a></div>
+                <a href="https://arbitrum.TODO:.xyz/lending" target="_blank"
+                  style={{ opacity: 1, transform: "none" }}
+                  className='ml-[8px]'
+                >
+                  <button
+                    className="font-bold text-black text-[15px] leading-[13px] text-center h-[36px] w-[140px] bg-gradient-to-r  rounded-md relative lg:w-[184px] lg:h-[48px] lg:text-[16px] z-30 group mt-[66px]"
+                    style={{ opacity: 1, transform: "none", background: "#fff", border: "1px solid #39a29a", borderTop: "1px solid #57b68d", borderBottom: "1px solid #1589aa" }}>
+                    Learn more
+                    <div className='absolute top-0 left-0 buttoncolor'></div>
+                  </button>
+                </a>
               </motion.div>
             </div>
-            <div className="" style={{ transform: "translateY(14.3834px) translateZ(0px)" }}><img
-              src="/assets/cubes1.1fe2b0b8.png"
-              className="mt-[20px] lg:w-full lg:min-w-[450px] lg:max-w-[490px] lg:h-auto lg:object-cover md:mt-[100px]"
-              style={{ opacity: 1, transform: "none" }} /></div>
+            <div className='p4bg' >
+              <img
+                src="./src/assets/p4bg.svg"
+                className="w-auto lg:min-w-[450px] lg:max-w-[892px] mt-[20px] lg:w-full  lg:h-auto lg:object-cover md:mt-[100px]"
+                style={{ opacity: 1, transform: "none" }} />
+            </div>
           </div>
         </div>
-        <div className="lg:flex lg:flex-row lg:justify-between lg:mt-[132px] gap-[30px] lg:max-w-full">
-          <motion.div
-            initial={{ x: -150 }}
-            animate={{ x: inViewQA ? 0 : -150 }}
-            transition={{ duration: 0.5 }}
-            ref={refQA}
-          >
-          <div className="relative z-20 lg:w-fit" style={{ opacity: 1, transform: "none" }}>
-            <h1 className="mt-[108px] font-bold text-[32px] leading-[55px]  text-left lg:text-[42px] lg:mt-0">FAQ</h1><a
-              href="https://docs.TODO:.xyz" target="_blank"
-              className="font-semibold text-white text-[16px] text-center  h-[34px] w-[177px] rounded-md border-[2px] border-white mt-[6px] grid place-items-center mr-auto lg:w-[186px] lg:mt-[13px] lg:h-[48px] hover:bg-white hover:text-black transition-all duration-300">Documentation</a>
+
+{/* 5 */}
+        <div className='relative lg:mt-[243px]' >
+          <img className="absolute right-[-83px] top-0 p5" src="./src/assets/p5lines.svg" />
+          <div>
+            <div>
+              <div className="relative z-20  w-full" style={{
+                alignItems: "center",
+                display: "flex"
+              }} >
+                <h1 className="qah1 font-bold mt-[40px] ml-[3px] text-[32px] leading-[55px]  text-left lg:text-[42px]  lg:text-[58px] " >Q&A</h1>
+              </div>
+            </div>
+
+            <h1 className="font-blod text-[34px] leading-[32px]  relative lg:text-[31px] lg:mt-[70px] lg:text-[30px]"
+              style={{ opacity: 1, transform: "none" }}>
+                How to mitigate the risk?
+              </h1>
+            <p className="text-[#686972]  font-normal text-[16px] leading-[20px]  mt-[24px] lg:text-[24px]  lg:leading-[36px] lg:mt-[43px]"
+              style={{ opacity: 1, transform: "none" }}>Crebit set transparent rules to manage liquidity risk and credit risk. For details, pls refer to our documents.</p>
+
+            <a href="https://arbitrum.TODO:.xyz/lending" target="_blank"
+              style={{ opacity: 1, transform: "none" }}
+              className='ml-[8px]'
+            >
+              <button
+                className="font-bold text-black text-[15px] leading-[13px] text-center h-[36px] w-[140px] bg-gradient-to-r  rounded-md relative lg:w-[184px] lg:h-[48px] lg:text-[16px] z-30 group mt-[47px]"
+                style={{ opacity: 1, transform: "none", background: "#fff", border: "1px solid #39a29a", borderTop: "1px solid #57b68d", borderBottom: "1px solid #1589aa" }}>
+                Documentation
+                <div className='absolute top-0 left-0 buttoncolor'></div>
+              </button>
+            </a>
+            <div className="lg:flex lg:flex-row lg:justify-between lg:mt-[132px] gap-[30px] lg:max-w-full w-800">
+              <img className="p5bg left-0 top-0 ml-[-100px]" src="./src/assets/p5bg.svg" />
+              <div className="p5box flex flex-col mt-[57px] lg:mt-0 relative z-10 w-[790px]" style={{ opacity: 1, transform: "none" }}>
+                <div className="flex flex-col mt-[32px] lg:mt-[14px] lg:max-w-[793px]">
+                  <div className="flex flex-row justify-between items-start relative z-20 cursor-pointer">
+                    <h1 className="p5h1 font-normal text-[22px]  lg:text-[32px] w-10/12 lg:max-w-full mt-[12px]" >How the reserve pool works?</h1>
+
+                  </div>
+                  <p
+                    className="p5p text-[18px] pt-[10px] text-[#686972] font-normal lg:text-[24px] lg:min-w-fit lg:w-full lg:max-w-[658px] transition-all duration-300 mt-[23px] mb-[-20px]">
+                    The reserve pool is used to mitigate the default risk of the lending.
+                  </p>
+                  <div className="w-5/6 h-[6px] mt-[15px] lg:mt-[95px] underline" style={{ backgroundImage: "linear-gradient(to right, black,#9b9b9c 40%,#d3d3d5 60%, transparent 100%)", backgroundPosition: "25% 0", borderRadius: '10px' }}></div>
+                </div>
+                <div className="flex flex-col mt-[32px] lg:mt-[57px] lg:max-w-[793px]">
+                  <div className="flex flex-row justify-between items-start relative z-20 cursor-pointer">
+                    <h1 className="p5h1  font-normal text-[22px]  lg:text-[32px] w-10/12 lg:max-w-full mt-[12px]" >What is the role of the voters?</h1>
+
+                  </div>
+                  <p
+                    className="p5p text-[18px] pt-[10px] text-[#686972] font-normal lg:text-[24px] lg:min-w-fit lg:w-full lg:max-w-[658px] transition-all duration-300 mt-[2px] mb-[-20px]">
+                    Voters are the key successful factor in crebit ecosystem, they have the voting rights to approve the funds in the lending pool to borrowers
+                  </p>
+                  <div className="w-5/6 h-[6px] mt-[15px] lg:mt-[96px] underline" style={{ backgroundImage: "linear-gradient(to right, black,#9b9b9c 40%,#d3d3d5 60%, transparent 100%)", backgroundPosition: "25% 0", borderRadius: '10px' }}></div>
+                </div>
+                <div className="flex flex-col mt-[32px] lg:mt-[57px] lg:max-w-[793px] relative z-50">
+                  <div className="flex flex-row justify-between items-start relative z-20 cursor-pointer">
+                    <h1 className="p5h1  font-normal text-[22px]  lg:text-[32px] w-10/12 lg:max-w-full mt-[-8px]" >Who can be the voters?</h1>
+
+                  </div>
+                  <p
+                    className="p5p text-[18px] pt-[10px] text-[#686972] font-normal lg:text-[24px] lg:min-w-fit lg:w-full lg:max-w-[658px] transition-all duration-300 mt-[16px] mb-[-20px]">
+                    Only the token owner can be the voters. How to get the token, pls refer to tokenomics.
+                  </p>
+                  <div className="w-5/6 h-[6px] mt-[15px] lg:mt-[109px] underline" style={{ backgroundImage: "linear-gradient(to right, black,#9b9b9c 40%,#d3d3d5 60%, transparent 100%)", backgroundPosition: "25% 0", borderRadius: '10px' }}></div>
+                </div>
+              </div>
+
+            </div>
           </div>
-          </motion.div>
-          <motion.div
-            initial={{ x: 150 }}
-            animate={{ x: inViewQA ? 0 : 150 }}
-            transition={{ duration: 0.5 }}
-            ref={refQA}
-          >
-          <div className="flex flex-col mt-[57px] lg:mt-0 relative z-10 w-fill" style={{ opacity: 1, transform: "none" }}>
-            <Collapse quest="How to mitigate the risk?" anwser='Crebit set transparent rules to manage liquidity risk and credit risk. For details, pls refer to our documents.' css="flex flex-col lg:min-w-fit lg:w-full lg:max-w-[793px]" />
-            <Collapse quest="How the reserve pool works?" anwser='The reserve pool is used to mitigate the default risk of the lending.' css="flex flex-col mt-[32px] lg:mt-[57px] lg:max-w-[793px]" />
-            <Collapse quest="What is the role of the voters?" anwser='Voters are the key successful factor in crebit ecosystem, they have the voting rights to approve the funds in the lending pool to borrowers' css="flex flex-col mt-[32px] lg:mt-[57px] lg:max-w-[793px]" />
-            <Collapse quest="Who can be the voters?" anwser='Only the token owner can be the voters. How to get the token, pls refer to tokenomics.' css="flex flex-col mt-[32px] lg:mt-[57px] lg:max-w-[793px] relative z-50" />
-          </div>
-          </motion.div>
-        </div>
-        <footer className="flex flex-row items-center mt-[310px] lg:mb-[62px]"><a
-          className="font-bold text-[18px]  lg:text-[24px]" href="#start"
-          style={{ opacity: 1, transform: "none" }}>TODO:</a>
-          <a className="font-bold text-[18px]  lg:text-[24px]"
-            href="#start" style={{ opacity: 1, transform: "none" }}>
-            <div className="invisible lg:visible">
-              <a href="#">
-                <img id="badge-button"
-                  src="https://static.alchemyapi.io/images/marketing/badge.png" alt="Alchemy Supercharged"
-                  style={{ width: "150px", height: "31.5px", marginLeft: " 24px" }} /></a></div>
-          </a><a className="font-normal text-[14.7px] ml-auto lg:text-[21px]" href="https://blog.TODO:.xyz/"
-            target="_blank" style={{ opacity: 1, transform: "none" }}>Blog</a><a
-              className="font-normal text-[14.7px] ml-[40px] lg:text-[21px]" href="https://docs.TODO:.xyz/"
-              target="_blank" style={{ opacity: 1, transform: "none" }}>Docs</a><a className="ml-[42px]"
-                href="https://twitter.com/TODO:xyz" target="_blank" style={{ opacity: 1, transform: "none" }}><svg
-                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                  className="w-[30px] h-auto fill-white lg:w-[42px] lg:h-[45px]">
-              <path
-                d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z">
-              </path>
-            </svg></a></footer>
+       </div>
+        <div className='flex justify-center font-bold text-[24px] lg:text-[45px] mb-[290px] mt-[100px] ' >Audited And Secured By:</div>
       </div>
 
     </>
