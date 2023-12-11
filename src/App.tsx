@@ -28,7 +28,7 @@ function App() {
           <div
             className="relative z-10 flex flex-row items-center justify-start gap-[5px] lg:gap-[10px] flex-wrap leading-[31.68px] lg:leading-[55px] max-w-fit">
             <div className="head-motion-span flex-wrap lg:flex-nowrap lg:leading-[55px] leading-[40px]">
-              <img src="./src/assets/p1circle.svg" className='w-[60px] left-[36px] top-[-14px] lg:min-w-[111px] lg:h-auto absolute lg:left-[56px] lg:top-[-24px] lg:object-cover' style={{ zIndex: 0 }}></img>
+              <img src="assets/p1circle.svg" className='w-[60px] left-[36px] top-[-14px] lg:min-w-[111px] lg:h-auto absolute lg:left-[56px] lg:top-[-24px] lg:object-cover' style={{ zIndex: 0 }}></img>
 
               <motion.div
                 initial={{ y: 20 }}
@@ -59,9 +59,9 @@ function App() {
         </h1>
         <p className="text-[#686972] w-8/12 font-normal text-[16px] leading-[20px]  mt-[40px] lg:text-[24px] lg:w-[850px] lg:leading-[36px] z-20 relative"
           style={{ opacity: 1 }}>Crebit is an SVB model on-chain lending protocol which enable liquidity flow between LPs and projects.</p>
-        <img src="./src/assets/p1bg.svg"
+        <img src="assets/p1bg.svg"
           className=" lg:min-w-[447px] lg:h-auto lg:object-cover absolute right-[0px] top-[0px] bg-repeat-x" style={{ opacity: 1, transform: "none" }} />
-        <img src="./src/assets/p1gradients.svg"
+        <img src="assets/p1gradients.svg"
           className=" w-full lg:min-w-[447px] lg:h-auto lg:object-cover absolute right-[0px] top-[0px]" style={{ opacity: 0.2, transform: "none" }}></img>
 
         {/* 2 */}
@@ -144,7 +144,7 @@ function App() {
             </div>
 
             <div style={{ transform: " translateY(86px) translateZ(0px)" }}>
-              <img src="./src/assets/p2bg.svg"
+              <img src="assets/p2bg.svg"
                 className="w-[384px] lg:w-[384px] lg:h-auto lg:object-cover" style={{ opacity: 1, transform: "none" }} />
             </div>
           </div>
@@ -196,7 +196,7 @@ function App() {
             <div className="lg:flex-1 p3" 
             style={{  transformOrigin: 'left', position: 'relative', left: "-100px" }}
             >
-              <img src="./src/assets/p3bg.svg"
+              <img src="assets/p3bg.svg"
                 className="lg:h-auto lg:object-cover" />
             </div>
 
@@ -246,7 +246,7 @@ function App() {
             </div>
             <div className='p4bg' >
               <img
-                src="./src/assets/p4bg.svg"
+                src="assets/p4bg.svg"
                 className="w-auto lg:min-w-[450px] lg:max-w-[892px] mt-[20px] lg:w-full  lg:h-auto lg:object-cover md:mt-[100px]"
                 style={{ opacity: 1, transform: "none" }} />
             </div>
@@ -255,7 +255,7 @@ function App() {
 
 {/* 5 */}
         <div className='relative lg:mt-[243px]' >
-          <img className="absolute right-[-83px] top-0 p5" src="./src/assets/p5lines.svg" />
+          <img className="absolute right-[-83px] top-0 p5" src="assets/p5lines.svg" />
           <div>
             <div>
               <div className="relative z-20  w-full" style={{
@@ -285,7 +285,7 @@ function App() {
               </button>
             </a>
             <div className="lg:flex lg:flex-row lg:justify-between lg:mt-[132px] gap-[30px] lg:max-w-full w-800">
-              <img className="p5bg left-0 top-0 ml-[-100px]" src="./src/assets/p5bg.svg" />
+              <img className="p5bg left-0 top-0 ml-[-100px]" src="assets/p5bg.svg" />
               <div className="p5box flex flex-col mt-[57px] lg:mt-0 relative z-10 w-[790px]" style={{ opacity: 1, transform: "none" }}>
                 <div className="flex flex-col mt-[32px] lg:mt-[14px] lg:max-w-[793px]">
                   <div className="flex flex-row justify-between items-start relative z-20 cursor-pointer">
