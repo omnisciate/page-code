@@ -60,9 +60,9 @@ function App() {
         <p className="text-[#686972] w-8/12 font-normal text-[16px] leading-[20px]  mt-[40px] lg:text-[24px] lg:w-[850px] lg:leading-[36px] z-20 relative"
           style={{ opacity: 1 }}>Crebit is an SVB model on-chain lending protocol which enable liquidity flow between LPs and projects.</p>
         <img src="assets/p1bg.svg"
-          className=" lg:min-w-[447px] lg:h-auto lg:object-cover absolute right-[0px] top-[0px] bg-repeat-x" style={{ opacity: 1, transform: "none" }} />
+          className=" lg:min-w-[447px] lg:h-auto lg:object-cover absolute right-[0px] top-[0px] bg-repeat-x p1bg"  />
         <img src="assets/p1gradients.svg"
-          className=" w-full lg:min-w-[447px] lg:h-auto lg:object-cover absolute right-[0px] top-[0px]" style={{ opacity: 0.2, transform: "none" }}></img>
+          className=" w-full lg:min-w-[447px] lg:h-auto lg:object-cover absolute right-[0px] top-[0px] p1bg" style={{ opacity: 0.2}}></img>
 
         {/* 2 */}
         <motion.div
@@ -98,9 +98,9 @@ function App() {
         </motion.div>
         <div className="relative">
           <div
-            className="w-[120vw] h-full max-h-[400px] absolute top-0 left-0 bg-gradient-to-b from-transparent  -translate-y-[30%] -translate-x-[10vw] transform-gpu transition-all duration-300 lg:hidden">
+            className="w-[120vw] h-full max-h-[400px] absolute top-0 left-0 bg-gradient-to-b from-transparent  -translate-y-[30%] -translate-x-[10vw]  lg:hidden">
           </div>
-          <div className="lg:flex flex-row items-center justify-between mt-[380px] lg:mt-[500px] z-50 relative overflow-visible"
+          <div className="lg:flex flex-row items-center justify-between mt-[370px]  z-50 relative overflow-visible box2"
             style={{ opacity: 1 }}>
             <div>
               <motion.div
@@ -149,7 +149,7 @@ function App() {
             </div>
           </div>
           {/* 3 */}
-          <div className="lg:flex flex-row-reverse items-center justify-between mt-[175px] z-10 relative overflow-visible"
+          <div className="lg:flex flex-row-reverse items-center justify-between mt-[270px] z-10 relative overflow-visible"
             style={{ opacity: 1 }}>
 
             <div className="lg:flex-1 relative z-10">
@@ -202,7 +202,7 @@ function App() {
 
           </div>
           {/* 4 */}
-          <div className="lg:flex flex-row items-center justify-between mt-[-22px] lg:gap-[50px] relative w-full"
+          <div className="lg:flex flex-row items-center justify-between mt-[270px] lg:gap-[50px] relative w-full"
             style={{ opacity: 1 }}>
             
             <div className="relative z-10 lg:flex-1">
@@ -293,7 +293,7 @@ function App() {
 
                   </div>
                   <p
-                    className="p5p text-[18px] pt-[10px] text-[#686972] font-normal lg:text-[24px] lg:min-w-fit lg:w-full lg:max-w-[658px] transition-all duration-300 mt-[23px] mb-[-20px]">
+                    className="p5p text-[18px] pt-[10px] text-[#686972] font-normal lg:text-[24px] lg:min-w-fit lg:w-full lg:max-w-[658px]  mt-[23px] mb-[-20px]">
                     The reserve pool is used to mitigate the default risk of the lending.
                   </p>
                   <div className="w-5/6 h-[6px] mt-[15px] lg:mt-[95px] underline" style={{ backgroundImage: "linear-gradient(to right, black,#9b9b9c 40%,#d3d3d5 60%, transparent 100%)", backgroundPosition: "25% 0", borderRadius: '10px' }}></div>
@@ -304,7 +304,7 @@ function App() {
 
                   </div>
                   <p
-                    className="p5p text-[18px] pt-[10px] text-[#686972] font-normal lg:text-[24px] lg:min-w-fit lg:w-full lg:max-w-[658px] transition-all duration-300 mt-[2px] mb-[-20px]">
+                    className="p5p text-[18px] pt-[10px] text-[#686972] font-normal lg:text-[24px] lg:min-w-fit lg:w-full lg:max-w-[658px]  mt-[2px] mb-[-20px]">
                     Voters are the key successful factor in crebit ecosystem, they have the voting rights to approve the funds in the lending pool to borrowers
                   </p>
                   <div className="w-5/6 h-[6px] mt-[15px] lg:mt-[96px] underline" style={{ backgroundImage: "linear-gradient(to right, black,#9b9b9c 40%,#d3d3d5 60%, transparent 100%)", backgroundPosition: "25% 0", borderRadius: '10px' }}></div>
@@ -315,7 +315,7 @@ function App() {
 
                   </div>
                   <p
-                    className="p5p text-[18px] pt-[10px] text-[#686972] font-normal lg:text-[24px] lg:min-w-fit lg:w-full lg:max-w-[658px] transition-all duration-300 mt-[16px] mb-[-20px]">
+                    className="p5p text-[18px] pt-[10px] text-[#686972] font-normal lg:text-[24px] lg:min-w-fit lg:w-full lg:max-w-[658px] mt-[16px] mb-[-20px]">
                     Only the token owner can be the voters. How to get the token, pls refer to tokenomics.
                   </p>
                   <div className="w-5/6 h-[6px] mt-[15px] lg:mt-[109px] underline" style={{ backgroundImage: "linear-gradient(to right, black,#9b9b9c 40%,#d3d3d5 60%, transparent 100%)", backgroundPosition: "25% 0", borderRadius: '10px' }}></div>
